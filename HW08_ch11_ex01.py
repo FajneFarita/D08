@@ -10,7 +10,12 @@
 
 # Body
 def store_to_dict():
-    pass
+    with open('words.txt', 'r') as f:
+        words = f.read().split()
+        dictionary = {word: word.upper() for word in words}
+    return dictionary
+
+
 
 
 ###############################################################################
